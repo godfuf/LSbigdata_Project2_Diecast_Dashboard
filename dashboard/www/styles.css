@@ -1,0 +1,417 @@
+:root {
+  --bslib-sidebar-main-bg: #f8f8f8;
+}
+
+body {
+    font-family: "MaruBuri", sans-serif;
+    background-color: #f0f4f7;
+    color: #3e4e3e;
+    letter-spacing: 0.3px;
+    
+}
+
+/* selectize dropdown 스타일 커스터마이징 */
+.selectize-dropdown {
+    font-size: 14px;
+    background-color: #f9f9f9;  /* 밝은 회색 배경 */
+    border: 1px solid #ccc;     /* 테두리 */
+    border-radius: 8px;         /* 둥근 테두리 */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  /* 약간의 그림자 */
+    z-index: 1000;              /* 다른 요소 위에 올라오도록 */
+    width: 1000px;
+}
+
+/* select 항목에 마우스 올렸을 때 */
+.selectize-dropdown .option:hover {
+    background-color: #e6f7ff; /* 연한 파란색 하이라이트 */
+    color: #000;
+}
+
+/* 선택된 항목 박스 스타일 (다중 선택 시) */
+.selectize-control.multi .item {
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 6px;
+    margin: 2px 2px 2px 0;
+}
+
+.shiny-input-container {
+    width: auto !important;  /* 기본 300px을 무시하고 자동 너비 적용 */
+    min-width: 0 !important; /* 필요 시 최소 너비도 해제 */
+    max-width: 100% !important; /* 필요 시 최대 너비 설정 */
+}
+
+
+/* styles.css */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.custom-table th, .custom-table td {
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    text-align: left;
+}
+
+
+#spike_chart_div {
+    width: 100% !important;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+#spike_chart_div > div.plot-container {
+    width: 100% !important;
+}
+
+#spike_chart_div .main-svg {
+    width: 100% !important;
+    height: auto !important;
+}
+    
+#h-100 {
+    height: 100px !important;
+}
+
+.h-400 {
+    height: 100%;
+    max-height: 500px;
+}
+
+.mh-432 {
+    height: 432px;
+    max-height: 432px;
+}
+
+.maxh-500 {
+    height: 500px;
+}
+
+.maxh-400 {
+    max-height: 400px;
+    height: 400px;
+}
+
+.main-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.prediction-panel {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+.control-panel {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+}
+.analysis-panel {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+.prediction-good {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #c3e6cb;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.prediction-bad {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #f5c6cb;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.analyze-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+.analyze-btn:hover {
+    background: #218838;
+}
+.pdf-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin: 20px 0;
+}
+.pdf-btn:hover {
+    background: #0056b3;
+}
+.defect-range-bar-multi {
+    height: 6px;
+    border-radius: 3px;
+    margin: 4px 0;
+    position: relative;
+    overflow: hidden;
+    width: 70%;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: 1px solid #dee2e6;
+}
+.defect-info {
+    font-size: 10px;
+    color: #6c757d;
+    text-align: left;
+    margin-top: 2px;
+}
+.form-control {
+    font-size: 11px;
+    text-align: center;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 3px 5px;
+    height: 28px;
+}
+.irs {
+    font-family: 'Malgun Gothic', sans-serif;
+    font-size: 11px;
+}
+.irs-slider {
+    width: 14px;
+    height: 14px;
+}
+.log-data-panel {
+    background: #f0f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #b3d9ff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.log-table {
+    font-size: 11px;
+    border-collapse: collapse;
+    width: 100%;
+}
+.log-table th {
+    background: #e3f2fd;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #90caf9;
+}
+.log-table td {
+    padding: 6px 8px;
+    text-align: center;
+    border: 1px solid #e1e1e1;
+}
+.log-table tr:hover {
+    background-color: #e3f2fd !important;
+    cursor: pointer;
+}
+.current-data-info {
+    background: linear-gradient(135deg, #e8f4fd, #d1ecf1);
+    border: 1px solid #bee5eb;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #0c5460;
+}
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+.btn-secondary:hover {
+    background: #545b62;
+}
+
+
+.container-fluid {
+    padding-left: 0 !important;
+    padding-right:0 !important;
+}
+
+.tab-content {
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+
+/* 원하는 카드에만 적용되는 스타일 */
+.custom-card {
+    position: relative;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 16px;
+    margin-bottom: 16px;
+    overflow: hidden; /* 내부 선 넘는 것 잘림 방지 */
+}
+
+.custom-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;  /* 선 두께 */
+    background-color: #007BFF;  /* 원하는 강조 색상 */
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+
+.custom-card:hover {
+    transform: translateY(-2px);
+}
+
+.custom-card-header {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.wang_text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #d9534f;  /* 붉은 강조색 (또는 #007BFF 등으로 조정 가능) */
+}
+
+.latest-value {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #222;
+}
+
+.avg-inline {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #999;
+    margin-left: 4px;
+}
+
+
+.arrow {
+    margin-right: 4px;  /* 또는 0.25rem 정도 */
+}
+
+.change-up, .change-down {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.change-up {
+    color: #d9534f;
+}
+
+.change-down {
+    color: #007BFF;
+}
+
+span.input-group-text::before {
+    content: "~";
+    color: #333;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+span.input-group-text {
+    color: transparent;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    position: relative;
+    width: 2rem;  /* 적당한 너비 */
+    height: 100%;
+    padding: 0;
+}
+
+.dashboard-title {
+    font-size: 42px;
+    color: #1f2937;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.dashboard-title-box {
+    background: linear-gradient(180deg,#e3f2fd, #ffffff);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.dashboard-title-box h1 {
+    font-size: 42px;
+    font-family: "MaruBuri", sans-serif;
+    color: #1f2937;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.navbar-nav {
+    justify-content: center !important;
+    display: flex !important;
+    width: 100%;
+}
+
+.nav-tabs {
+    justify-content: center !important;
+    gap: 24px;
+}
+
+/* ✅ 탭 버튼 크기 키우기 */
+.nav-tabs .nav-link,
+button.nav-link {
+    font-size: 50px !important;
+    font-weight: 700 !important;
+    padding: 12px 24px !important;
+}
+
+.btn-apply {
+    height: 37px !important;
+}
+
+.log-load-panel {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}

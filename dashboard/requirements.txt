@@ -1,0 +1,17 @@
+faicons
+shiny
+seaborn
+pandas
+shinywidgets
+numpy
+matplotlib
+seaborn
+plotly==5.24.1
+htmltools
+xgboost
+lightgbm
+shap
+joblib
+plotnine
+openpyxl
+scikit-learn==1.6.1

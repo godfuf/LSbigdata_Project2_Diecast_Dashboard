@@ -1,0 +1,12 @@
+{
+    "https://api.shinyapps.io": {
+        "server_url": "https://api.shinyapps.io",
+        "filename": "C:\\Users\\user\\Documents\\pjt\\pjt05\\pjt-master\\pjt05\\dashboard",
+        "app_url": "https://nueos.shinyapps.io/pjt05/",
+        "app_id": 14837559,
+        "app_guid": null,
+        "title": "pjt05",
+        "app_mode": "python-shiny",
+        "app_store_version": 1
+    }
+}
