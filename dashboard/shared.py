@@ -23,11 +23,11 @@ font_prop = fm.FontProperties(fname=font_path)
 
 
 app_dir = Path(__file__).parent
-DATA_PATH_SE = 'asset/data/a_shap_applied_no_data.csv'
-DATA = load_data('asset/data/a_shap_applied_no_data.csv')
-DATA_ANSWER = load_data('asset/data/a_shap_applied_data.csv')
+DATA_PATH_SE = './asset/data/a_shap_applied_no_data.csv'
+DATA = load_data('./asset/data/a_shap_applied_no_data.csv')
+DATA_ANSWER = load_data('./asset/data/a_shap_applied_data.csv')
 TEST_DATA = load_data('./asset/data/test.csv')
-BOUND_DATA = load_bound_data('asset/data/bounds.csv')
+BOUND_DATA = load_bound_data('./asset/data/bounds.csv')
 NUM_COLS = DATA.select_dtypes(include='number').columns.tolist()
 CAT_COLS = DATA.select_dtypes(include='object').columns.tolist()
 MOLD_CODE = DATA['mold_code'].unique().tolist()

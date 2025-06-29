@@ -43,6 +43,17 @@ from xgboost import Booster, DMatrix
 import matplotlib.dates as mdates
 import math
 
+import sklearn
+import sklearn.compose._column_transformer as _ct
+
+# pickle이 예전 버전의 scikit-learn에서 사용하던 private 이름을 찾을 수 있도록 alias(별칭)를 생성합니다.
+try:
+    # scikit-learn 1.2+ 버전에서는 RemainderColsList가 public 클래스입니다.
+    _ct._RemainderColsList = _ct.RemainderColsList
+except AttributeError:
+    # 이전 버전이거나 해당 속성이 없는 경우를 대비한 예외 처리
+    pass
+
 # font
 app_dir = Path(__file__).parent
 font_path = app_dir / "MaruBuri-Regular.ttf"
@@ -87,17 +98,6 @@ anomaly_results = reactive.Value([])
 show_defect_detail_modal = reactive.value(False)
 selected_defect_alert_data = reactive.value({})
 
-# BEFORE you open the pickle:
-import sklearn
-import sklearn.compose._column_transformer as _ct
-
-# alias the new name to the old private name so pickle can find it:
-try:
-    _ct._RemainderColsList = _ct.RemainderColsList
-except AttributeError:
-    # if RemainderColsList doesn't exist either, you may 
-    # need to check the exact class name in your sklearn version
-    pass
 
 
 def load_improved_pipeline():

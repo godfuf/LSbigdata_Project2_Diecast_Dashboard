@@ -131,7 +131,7 @@ train_df['Coolant_temperature'].value_counts()
 train_df['Coolant_temperature'].unique()
 train_df = train_df[train_df['Coolant_temperature'] != 1449]
 
-train_df_E = pd.read_csv('C:/Users/USER/Documents/project/pjt05/hj/train_ES.csv')
+train_df_E = pd.read_csv('../data/train_ES.csv')
 #########################################################
 
 # IQR 확인
@@ -164,7 +164,7 @@ for var in numeric_vars:
 
 
 # mold code 별 분석
-train_df_E = pd.read_csv('C:/Users/USER/Documents/project/pjt05/hj/train_ES.csv')
+train_df_E = pd.read_csv('../data/train_ES.csv')
 
 # mold code 8412  18114개
 # IQR 
@@ -206,7 +206,7 @@ from sklearn.decomposition import PCA
 from sklearn.cluster import DBSCAN
 
 # IQR
-# train_df_E = pd.read_csv('C:/Users/USER/Documents/project/pjt05/hj/train_ES.csv')
+# train_df_E = pd.read_csv('../data/train_ES.csv')
 # # IQR 이상치 1.5 상한 하한 하고 그랬을 때 변수 별 이상치 비율
 # def code_IQR():
 #     numeric_vars = [
@@ -250,7 +250,7 @@ from sklearn.cluster import DBSCAN
 # DBSCAN 이상치 후보 중 이상치 (군집있는건 패턴이 있는 이상치(확인필요), 군집없는 이상치는 한번씩 튀는 불규칙적인 이상치라고 생각)
 # IQR 1.5로하고  PCA -> IQR -> DBSCAN -> 시각화
 # IQR로 이상치 후보군을 한번 걸러내고 또 DBSCAN으로 이상치 
-train_df_E = pd.read_csv('C:/Users/USER/Documents/project/pjt05/hj/train_ES.csv') # 몰드 코드 원핫인코딩
+train_df_E = pd.read_csv('../data/train_ES.csv') # 몰드 코드 원핫인코딩
 train_df_E = train_df_E.drop(columns=['Unnamed: 0'])
 train_df_E = train_df_E.drop(columns=['id'])
 train_df_E['mold_code'] = train_df_E['mold_code'].astype('object')
@@ -332,7 +332,7 @@ from sklearn.ensemble import IsolationForest
 import matplotlib.pyplot as plt
 
 # 데이터 불러오기
-train_df_E = pd.read_csv('C:/Users/USER/Documents/project/pjt05/hj/train_ES.csv')
+train_df_E = pd.read_csv('../data/train_ES.csv')
 train_df_E = train_df_E.drop(columns=['Unnamed: 0'])
 train_df_E = train_df_E.drop(columns=['id'])
 train_df_E['mold_code'] = train_df_E['mold_code'].astype('object')
@@ -447,7 +447,7 @@ from sklearn.cluster import DBSCAN
 import matplotlib.pyplot as plt
 
 # 데이터 불러오기 및 전처리
-train_df_E = pd.read_csv('C:/Users/USER/Documents/project/pjt05/hj/train_ES.csv')
+train_df_E = pd.read_csv('../data/train_ES.csv')
 train_df_E = train_df_E.drop(columns=['Unnamed: 0'])
 train_df_E = train_df_E.drop(columns=['id'])
 train_df_E['mold_code'] = train_df_E['mold_code'].astype('object')
@@ -498,7 +498,7 @@ plt.show()
 ##########################3전체 데이터 isolation forest#####
 # 불량률 전체 약4.4% 실제 불량률 보다 약간의 여유를 두고자 6%로 설정
 
-train_df_E = pd.read_csv('C:/Users/USER/Documents/project/pjt05/hj/train_ES.csv')
+train_df_E = pd.read_csv('../data/train_ES.csv')
 train_df_E = train_df_E.drop(columns=['Unnamed: 0','id'])
 train_df_E['mold_code'] = train_df_E['mold_code'].astype('object')
 
@@ -588,7 +588,7 @@ from sklearn.ensemble import IsolationForest
 import joblib
 
 # 1. 데이터 로드 및 전처리
-train_df_E = pd.read_csv('C:/Users/USER/Documents/project/pjt05/hj/train_ES.csv')
+train_df_E = pd.read_csv('../data/train_ES.csv')
 train_df_E = train_df_E.drop(columns=['Unnamed: 0', 'id'])
 train_df_E['mold_code'] = train_df_E['mold_code'].astype('object')
 train_df_E.keys()
